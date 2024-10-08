@@ -122,4 +122,19 @@ return {
     "Exafunction/codeium.vim",
     lazy = false,
   },
+
+  -- NvimTree
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,
+    config = function()
+      require("nvim-tree").setup({
+        view = {
+          width = 30,
+          side = "right",
+          signcolumn = "no",
+        },
+      })
+    end,
+  },
 }
