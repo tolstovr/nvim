@@ -29,7 +29,7 @@ map("n", "<leader>dn", function()
 end, { desc = "Step Over" })
 
 -- Git
-map("n", "<leader>gl", ":Flog<CR>", { desc = "Git Log" })
+-- map("n", "<leader>gl", ":Flog<CR>", { desc = "Git Log" })
 map("n", "<leader>gf", ":DiffviewFileHistory<CR>", { desc = "Git File History" })
 map("n", "<leader>gc", ":DiffviewOpen HEAD~1<CR>", { desc = "Git Last Commit" })
 map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git File History" })
@@ -61,6 +61,5 @@ map("i", "<C-g>", function()
   return vim.fn["codeium#Accept"]()
 end, { expr = true })
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
-
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
