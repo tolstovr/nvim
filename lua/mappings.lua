@@ -63,3 +63,4 @@ end, { expr = true })
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
+map("n", "<Right><Right>", "<cmd>NvimTreeFocus<cr>", { desc = "Focus NvimTree" })
