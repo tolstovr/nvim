@@ -64,3 +64,11 @@ end, { expr = true })
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 map("n", "<Right><Right>", "<cmd>NvimTreeFocus<cr>", { desc = "Focus NvimTree" })
+
+-- Check if autocompletion modal is shown
+function is_completion_active()
+  return vim.fn.pumvisible() == 1
+end
+
+-- Close autocompletion on esc
+vim.api.nvim_set_keymap('i', '<Esc>', 'v:lua.is_completion_active() ? "<C-e>i" : "<Esc>"', { expr = true, noremap = true, silent = true })
